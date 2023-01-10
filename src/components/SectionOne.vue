@@ -4,7 +4,7 @@
       <div
         class="
           image
-          col-lg-7 col-md-7 col-sm-12
+          col-lg-7 col-md-5 col-sm-12
           d-flex
           align-items-center
           justify-content-center
@@ -15,7 +15,7 @@
       <div
         class="
           introduce-content
-          col-lg-5 col-md-5 col-sm-12
+          col-lg-5 col-md-7 col-sm-12
           d-flex-col
           align-items-center
           justify-content-left
@@ -75,12 +75,19 @@ export default {
         font-size: 24px;
         margin-bottom: 20px;
       }
+      @media (max-width: 661px) {
+        font-size: 18px;
+        margin: 10px 0;
+      }
     }
     .item2 {
       font-size: 16px;
       color: #fff;
       @media (max-width: 991px) {
         font-size: 14px;
+      }
+      @media (max-width: 661px) {
+        font-size: 12px;
       }
     }
     .item3 {

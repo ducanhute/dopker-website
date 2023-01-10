@@ -76,13 +76,22 @@ export default {
         arrows: false,
         dots: true,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 20000,
+        speed: 18000,
         rows: 2,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1000,
         cssEase: "linear",
+        responsive: [
+          {
+            breakpoint: 661,
+            settings: {
+              slidesToShow: 1,
+              speed: 10000,
+            },
+          },
+        ],
       },
       settings2: {
         arrows: false,
@@ -94,6 +103,14 @@ export default {
         speed: 10000,
         autoplaySpeed: 1000,
         cssEase: "linear",
+        responsive: [
+          {
+            breakpoint: 661,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       },
     };
   },
@@ -135,6 +152,7 @@ export default {
   }
   .mr-10 {
     margin: 20px 0 0 0;
+    max-width: 200px;
   }
 }
 </style>

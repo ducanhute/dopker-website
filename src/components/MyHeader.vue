@@ -1,6 +1,27 @@
 <template>
-  <div class="header">
-    <div class="img-fra">
+  <div>
+    <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar-brand href="#"
+        ><img src="@/assets/img/logo1.png"
+      /></b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item
+            class="text"
+            v-for="(item, idx) in headerItems"
+            :key="item + idx"
+            :href="item.href"
+            >{{ item.title }}</b-nav-item
+          >
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+  </div>
+
+  <!-- <div class="img-fra">
       <img src="@/assets/img/logo1.png" />
     </div>
     <div class="header-item">
@@ -10,8 +31,7 @@
         :href="item.href"
         >{{ item.title }}</a
       >
-    </div>
-  </div>
+    </div> -->
 </template>
 
 <script>
@@ -52,42 +72,28 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1440px;
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(247, 240, 240);
+  font-weight: 600;
+  font-size: 20px;
+  @media (max-width: 341px) {
+    font-size: 16 px;
+  }
+}
+.navbar-toggler {
+  @media (max-width: 991px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 341px) {
+    font-size: 1.5rem;
+  }
+}
+ul.navbar-nav {
   width: 100%;
-  height: 97px;
-  color: aliceblue;
-  padding: 10px 15px 0;
-  background: rgba(3, 1, 33, 0.8);
-  .header-item {
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-    a {
-      @media (max-width: 767px) {
-        font-size: 10px;
-      }
-    }
-  }
-  .b-text {
-    font-weight: 600;
-    color: #ffd601;
-  }
-  a {
-    color: #fff;
-  }
-  .img-fra {
-    width: 134px;
-    height: 87px;
-    left: 61px;
-    top: 10px;
-    img {
-      width: 100%;
-      object-fit: scale-down;
-    }
-  }
+  display: flex;
+  justify-content: space-evenly;
+}
+.bg-info {
+  background-color: #030121 !important;
 }
 </style>

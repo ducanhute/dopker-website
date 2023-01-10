@@ -2,7 +2,7 @@
   <div class="footer container-fluid">
     <div class="wrap-footer row">
       <div class="col-lg-6 col-md-12">
-        <div class="footerLogo">
+        <div class="col-2">
           <img class="logo" src="@/assets/img/logo1.png" />
         </div>
         <div class="wrap-content col-md-12">
@@ -30,11 +30,32 @@
       </div>
       <div class="contact col-md-12 col-lg-6">
         <div class="item1">LIÊN HỆ</div>
-        <div class="item2">
-          <div>Họ và Tên:</div>
-          <div>Email:</div>
-          <div>Câu Hỏi:</div>
-        </div>
+
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="HỌ VÀ TÊN:"
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="ĐỊA CHỈ:"
+            />
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="CÂU HỎI:"
+            />
+          </div>
+        </form>
         <div class="btn">
           <button class="btn-item">Gửi</button>
         </div>
@@ -96,25 +117,30 @@ export default {
   background-size: cover;
   min-height: 100vh;
   width: 100%;
+  .form-group > input {
+    width: 78%;
+    margin: 10px 0;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+    @media (max-width: 662px) {
+      width: 100%;
+      height: 34px;
+    }
+  }
   .wrap-footer {
     position: relative;
     display: flex;
     height: 100%;
-    .footerLogo {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
     .wrap-content {
       margin-top: 20vh;
       padding-left: 20px;
       flex: 1;
       @media (max-width: 991px) {
-        margin-top: 12vh;
+        margin-top: 6vh;
       }
-
       @media (max-width: 662px) {
-        margin-top: 14vh;
+        margin-top: 6vh;
       }
 
       .content {
@@ -205,9 +231,16 @@ export default {
           margin: 10px 20px;
           width: 30px;
           height: 30px;
+          @media (max-width: 661px) {
+            width: 24px;
+            height: 24px;
+          }
         }
         .icon {
           text-align: left;
+          @media (max-width: 991px) {
+            text-align: center;
+          }
         }
       }
 

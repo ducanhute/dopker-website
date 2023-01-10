@@ -77,6 +77,7 @@ export default {
   background-image: url("@/assets/img/background2.PNG");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 30px 0;
   .title {
     color: #ffd601;
     font-size: 40px;

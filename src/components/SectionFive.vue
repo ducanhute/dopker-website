@@ -166,6 +166,7 @@ export default {
       border: none;
       color: white;
       margin: 0 20px;
+      background: 0%;
     }
   }
 }
